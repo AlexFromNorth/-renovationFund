@@ -3,7 +3,7 @@ import { FlatBannersProps } from "@/entities/flat-banners";
 export const flatBannersMock: FlatBannersProps = {
   topBanners: [
     {
-      title: 'Двор',
+      title: "Двор",
       text: `детские площадки: 1
 спортивные площадки: 1
 площадки для отдыха: 1
@@ -11,23 +11,22 @@ export const flatBannersMock: FlatBannersProps = {
 озеленение
 камеры видеонаблюдения
 освещение`,
-      video: '/img/yard.mp4',
-      image: '/img/buy_page/t1.webp',
+      video: "/pages/flatBanners_yard.mp4",
     },
     {
-      title: 'Безбарьерная среда',
-      image: '/img/buy_page/bottom3.webp',
+      title: "Безбарьерная среда",
+      image: "/pages/flatBanners_environ.webp",
     },
     {
-      title: 'Колясочная',
-      text: 'Удобства для каждого',
-      image: '/img/buy_page/t2_v2.jpg',
+      title: "Колясочная",
+      text: "Удобства для каждого",
+      image: "/pages/flatBanners_stroller.jpg",
     },
   ],
   wideBanner: {
-    title: 'Коммерческие помещения',
+    title: "Коммерческие помещения",
     text: `Коммерческие помещения в «Московских кварталах» — это возможность открыть свой бизнес в
 развитых жилых районах Москвы. Водоснабжение, отопление, система вентиляции уже готовы к подключению.`,
-    image: '/img/buy_page/bottom4.webp',
+    image: "/pages/flatBanners_commers.webp",
   },
 };

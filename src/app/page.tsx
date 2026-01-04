@@ -21,7 +21,7 @@ export default function Home() {
   const isLiked = useSelector(selectIsLiked(flatMock.id));
 
   return (
-    <div className=" min-h-screen bg-zinc-50 font-sans dark:bg-black">
+    <div className=" min-h-screen bg-zinc-50 font-sans dark:bg-black mt-[50px]">
       <main className="">
         <FlatInfo
           flat={flatMock}

@@ -3,8 +3,7 @@ import { FlatDescriptionProps } from "@/entities/flat-description/model/types";
 export const flatDescriptionMock: FlatDescriptionProps = {
   title: 'В квартире',
   images: [
-    { src: '/img/buy_page/nf-1.webp', alt: 'Интерьер 1' },
-    { src: '/img/buy_page/nf-2.webp', alt: 'Интерьер 2' },
+    { src: '/pages/flatDescription.webp', alt: 'Интерьер 1' },
   ],
   textBlocks: [
     'Все квартиры передаются с готовой чистовой отделкой — заселяйтесь и живите сразу.',

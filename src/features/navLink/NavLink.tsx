@@ -18,10 +18,10 @@ export const NavLink = ({ href, label }: NavLinkProps) => {
     <Link
       href={href}
       className={cn(
-        'px-3 py-2 rounded-md text-sm font-medium transition-colors',
+        'px-2 py-2 rounded-md text-sm font-medium transition-colors',
         isActive
-          ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300'
-          : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+          ? 'text-red-800'
+          : 'text-gray-800 hover:text-red-800'
       )}
     >
       {label}

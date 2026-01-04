@@ -15,8 +15,8 @@ export const flatStepsMock: flatStepsProps = {
     { id: 11, title: 'Регистрация права собственности и получение ключей' },
   ],
   banks: [
-    { name: 'Сбербанк', url: 'https://domclick.ru/ipoteka/calculator?subproductId=2&utm_source=sberbank&utm_medium=referral&utm_campaign=homenew', logo: '/img/buy_page/i_sber.svg' },
-    { name: 'Газпромбанк', url: 'https://www.gazprombank.ru/personal/mortgage/', logo: '/img/buy_page/i_gasprom.svg' },
+    { name: 'Сбербанк', url: 'https://domclick.ru/ipoteka/calculator?subproductId=2&utm_source=sberbank&utm_medium=referral&utm_campaign=homenew', logo: '/assets/ui/i_sber.svg' },
+    { name: 'Газпромбанк', url: 'https://www.gazprombank.ru/personal/mortgage/', logo: '/assets/ui/i_gasprom.svg' },
   ],
   moreLink: '/pokupka-nedvizhimosti-dlya-vseh/uslovia-pokupki/#buy_mortgage',
 };

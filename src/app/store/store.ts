@@ -8,7 +8,6 @@ export const store = configureStore({
   reducer: {
     header: headerReducer,
     flatInfo: flatInfoReducer,
-    // здесь будут другие редьюсеры
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

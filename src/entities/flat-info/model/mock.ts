@@ -14,8 +14,8 @@ export const flatMock: Flat = {
   m2Price: 352706,
   discount: 8.46,
   images: [
-    { id: 1, src: '/upload/plan1.png', locked: true },
-    { id: 2, src: '/upload/plan2.png' },
-    { id: 3, src: '/upload/plan3.png' },
+    { id: 1, src: '/pages/flatInfo_plans.png', locked: true },
+    { id: 2, src: '/pages/flatInfo_layewr.jpg' },
+    { id: 3, src: '/pages/flatInfo_view.jpg' },
   ],
 };
