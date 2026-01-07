@@ -14,7 +14,7 @@ export const Logo = () => {
         width={32}
         height={32}
         priority 
-        className="h-8 w-auto"
+        className="h-15 w-auto"
       />
     </Link>
   );

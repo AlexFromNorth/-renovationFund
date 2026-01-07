@@ -16,12 +16,14 @@ import { flatBannersMock } from "@/widgets/flat-banners";
 import { FlatInfo } from "@/widgets/flat-info";
 import { useDispatch, useSelector } from "react-redux";
 
+
+
 export default function Home() {
   const dispatch = useDispatch();
   const isLiked = useSelector(selectIsLiked(flatMock.id));
 
   return (
-    <div className=" min-h-screen bg-zinc-50 font-sans dark:bg-black mt-[50px]">
+    <div className=" min-h-screen bg-zinc-50 font-sans dark:bg-black mt-[100px]">
       <main className="">
         <FlatInfo
           flat={flatMock}

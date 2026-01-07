@@ -9,9 +9,9 @@ export const FooterBottom = () => {
       <Container>
         <div className="flex flex-col gap-8 md:flex-row md:justify-between text-left">
           {/* Левая часть */}
-          <div className="flex flex-col gap-4 max-w-md">
-            <Link href="https://stroi.mos.ru/" target="_blank" rel="noopener noreferrer" className="inline-block w-fit">
-              <Image src="/assets/logos/footer_logo.svg" alt="Stroi Mos" width={120} height={40} className="h-10 w-auto" />
+          <div className="flex flex-col gap-4 max-w-md ">
+            <Link href="https://stroi.mos.ru/" target="_blank" rel="noopener noreferrer" className="inline-block w-fit hover:opacity-70 duration-300 ">
+              <Image src="/assets/logos/footer_logo.svg" alt="Stroi Mos" width={120} height={40} className="h-16 w-auto" />
             </Link>
 
             <div className="text-sm">Адрес:</div>

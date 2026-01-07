@@ -2,7 +2,15 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --background-gray: #F2F2F2;
+  --text_primary: #4D4F53;
+  --text_red: #E90002;
+  --gray: #BDBDBD;
+  --gray_secondary: #949598;
+  --gray_light: #C7C7C733;
+  --text_white: #FFFFFF;
+  --primary_red: #E90002;
+  --secondary_red: #CC0605;
 }
 
 @theme inline {
@@ -12,15 +20,48 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+body, html, main {
+  background: var(--background);
+  color: var(--text_primary);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a, div, span, p, h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+h3{
+  font-weight: 500;
+}
+
+h4{
+  color: var(--gray);
+}
+
+.border{
+  border-color: var(--gray);
+}
+
+h2{
+  font-size: 36px;
+}
+h3{
+  font-size: 24px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-slide-up {
+  animation: slideUp 0.25s ease-out;
 }

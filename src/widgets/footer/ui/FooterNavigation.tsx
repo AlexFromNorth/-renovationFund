@@ -14,7 +14,7 @@ export const FooterNavigation = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className=" text-gray-700 hover:text-gray-800 transition-colors"
+                  className=" transition-colors"
                 >
                   {link.label}
                 </Link>

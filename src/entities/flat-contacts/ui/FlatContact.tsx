@@ -5,10 +5,10 @@ export const FlatContact = ({ text, phone }: FlatContactProps) => {
   return (
     <div className="py-[100px] bg-white">
       <div className="flex flex-col items-center gap-2">
-        <h2 className="text-lg font-medium">{text}</h2>
+        <h2 className="text-center">{text}</h2>
         <Link
           href={`tel:${phone.replace(/\s|\(|\)/g, "")}`}
-          className="text-red-600 font-semibold transition-colors"
+          className="text-[var(--secondary_red)] font-semibold transition-colors !text-[36px]"
         >
           {phone}
         </Link>

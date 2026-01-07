@@ -1,21 +1,32 @@
-// widgets/flat-card/types.ts
-export interface FlatInfoProps {
+export interface FlatImage {
+  id: number;
+  src: string;
+  alt?: string;
+  label?: string;
+}
+
+export interface MetroInfo {
+  name: string;
+  foot: string;
+  car: string;
+}
+
+export interface Flat {
   id: string;
   title: string;
   rooms: number;
-  area: number; // м²
+  area: number;
   building: string;
   floor: string;
   address: string;
-  metro: { name: string; time: string }[];
+  metro: MetroInfo[];
   features: string[];
-  mortgage: string;
-  purchaseCondition: string;
-  bookingDeadline: string;
-  article: string;
   totalPrice: number;
   m2Price: number;
-  discount?: number; // % скидка
-  images: { id: number; src: string; alt?: string; locked?: boolean }[];
-  on3DTour?: string;
+  discount?: number;
+  mortgage?: string[];
+  status?: string;
+  bookingUntil?: string;
+  article?: string;
+  images: FlatImage[];
 }

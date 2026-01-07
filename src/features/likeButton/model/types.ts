@@ -7,4 +7,5 @@ export interface NavItem {
 
 export interface HeaderState {
   isLiked: boolean;
+  likesCount: number; // добавляем поле
 }

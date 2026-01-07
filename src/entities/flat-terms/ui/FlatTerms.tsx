@@ -1,40 +1,50 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { FlatTermsProps } from '../model/types';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { FlatTermsProps } from "../model/types";
+import { Container } from "@/shared/ui/container";
+import { ImageBg } from "@/shared/ui/image-bg";
+import { MortgageCard } from "@/shared/ui/mortgager-card/ui/mortgager-card";
 
 export const FlatTerms = ({ title, description, image, banks }: FlatTermsProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div id="object-usloviya-pokupki" className="flat-purchase-terms border rounded-md p-4 bg-white dark:bg-gray-800 space-y-4">
-      
-      <div className="flex flex-col md:flex-row gap-4">
+    <Container className="my-12">
+      <div ref={ref} className="flex flex-col lg:flex-row">
         {/* Левая часть */}
-        <div className="flex-1 space-y-2">
-          <h2 className="text-xl font-bold">{title}</h2>
-          <p className="text-gray-700 dark:text-gray-300">{description}</p>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+          transition={{ duration: 0.6 }}
+          className="flex-1 lg:mr-8 mt-8 lg:mt-0"
+        >
           {image && (
-            <div className="relative w-full h-48 md:h-64">
-              <Image src={image} alt={title} fill className="object-cover rounded" />
+            <div className="relative w-full h-[100%]">
+              <ImageBg src={image} className="p-6 h-[100%] min-h-[300px]">
+                <div className="text-lg font-bold mb-2">{title}</div>
+                {description && <div className="mb-2">{description}</div>}
+                <a href="#" className="text-[var(--text_red)] absolute bottom-0">
+                  Подробнее →
+                </a>
+              </ImageBg>
             </div>
           )}
-        </div>
+        </motion.div>
 
         {/* Правая часть */}
-        <div className="flex-1 space-y-2">
-          <h3 className="font-semibold">Рассчитать ипотеку</h3>
-          <div className="flex flex-wrap gap-2">
-            {banks.map((bank) => (
-              <a key={bank.name} href={bank.url} target="_blank" className="block w-24 h-12 relative">
-                <Image src={bank.logo} alt={bank.name} fill className="object-contain" />
-              </a>
-            ))}
-          </div>
-          <p className="text-sm text-gray-500">
-            Сервис расчета ипотечных продуктов предоставляется на платформах банков-партнеров. Результаты расчетов не являются офертой и носят информационный характер.
-          </p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="lg:w-[400px] w-full mt-8 lg:mt-0"
+        >
+          <MortgageCard banks={banks} className="w-full h-full" />
+        </motion.div>
       </div>
-
-    </div>
+    </Container>
   );
 };

@@ -8,6 +8,7 @@ export interface FlatImage {
   src: string;
   alt?: string;
   locked?: boolean;
+  title?: string;
 }
 
 export interface Flat {
