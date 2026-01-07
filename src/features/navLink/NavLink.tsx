@@ -1,13 +1,14 @@
 // src/widgets/header/ui/NavLink.tsx
-'use client';
+"use client";
 
-import { cn } from '@/shared/lib/store';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { cn } from "@/shared/lib/store";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface NavLinkProps {
   href: string;
   label: string;
+  onClick?: () => void; // добавить эту строку
 }
 
 export const NavLink = ({ href, label }: NavLinkProps) => {
@@ -18,10 +19,8 @@ export const NavLink = ({ href, label }: NavLinkProps) => {
     <Link
       href={href}
       className={cn(
-        'px-2 py-2 rounded-md text-sm font-medium transition-colors',
-        isActive
-          ? 'text-red-800'
-          : 'text-gray-800 hover:text-red-800'
+        "px-2 py-2 rounded-md text-sm font-medium transition-colors",
+        isActive ? "text-red-800" : "text-gray-800 hover:text-red-800"
       )}
     >
       {label}

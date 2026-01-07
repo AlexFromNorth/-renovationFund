@@ -1,14 +1,16 @@
-export interface Metro {
-  name: string;
-  time: string;
-}
-
 export interface FlatImage {
   id: number;
   src: string;
   alt?: string;
-  locked?: boolean;
-  title?: string;
+  label?: string;
+  locked?: boolean;      
+  title?: string;        
+}
+
+export interface MetroInfo {
+  name: string;
+  foot: string;         
+  car: string;          
 }
 
 export interface Flat {
@@ -19,14 +21,14 @@ export interface Flat {
   building: string;
   floor: string;
   address: string;
-  metro: Metro[];
+  metro: MetroInfo[];
   features: string[];
-  mortgage?: string;
-  purchaseCondition?: string;
-  bookingDeadline?: string;
-  article?: string;
   totalPrice: number;
   m2Price: number;
   discount?: number;
+  mortgage?: string[];
+  status?: string;
+  bookingUntil?: string;
+  article?: string;
   images: FlatImage[];
 }

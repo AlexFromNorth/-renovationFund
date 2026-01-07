@@ -11,6 +11,7 @@ interface Props {
   flat: Flat;
   isLiked: boolean;
   onToggleLike: () => void;
+  on3DTour?: string; // добавьте этот пропс
 }
 
 export const FlatInfo = ({ flat, isLiked, onToggleLike }: Props) => {

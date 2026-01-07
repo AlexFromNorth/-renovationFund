@@ -3,12 +3,14 @@ export interface FlatImage {
   src: string;
   alt?: string;
   label?: string;
+  locked?: boolean;      
+  title?: string;        
 }
 
 export interface MetroInfo {
   name: string;
-  foot: string;
-  car: string;
+  foot: string;         
+  car: string;          
 }
 
 export interface Flat {
